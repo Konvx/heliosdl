@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:file', (req, res) => {
-    res.sendFile(dirname + '/' + req.params.file)
+    res.sendFile(__dirname + '/' + req.params.file)
 })
 
 app.listen(port, () => console.log(`App is listening at port ${port}`))
